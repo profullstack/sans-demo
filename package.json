@@ -1,0 +1,23 @@
+{
+  "name": "sans-demo",
+  "version": "1.0.0",
+  "description": "Demo app built using Sans UI",
+  "type": "module",
+  "scripts": {
+    "dev:web-components": "npx serve web-components",
+    "dev:svelte": "cd svelte && npx vite",
+    "dev": "echo \"Please run either 'npm run dev:web-components' or 'npm run dev:svelte'\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@profullstack/sans-ui": "^1.0.3"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1",
+    "vite": "^5.0.0",
+    "@sveltejs/vite-plugin-svelte": "^3.0.0",
+    "svelte": "^4.2.0"
+  }
+}
