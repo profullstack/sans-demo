@@ -9,7 +9,7 @@
     "dev": "echo \"Please run either 'npm run dev:web-components' or 'npm run dev:svelte'\"",
     "test:web": "node test-web-demo.js",
     "desktop": "node desktop/index.js",
-    "desktop:build": "echo \"Please follow the manual build instructions in README.md for desktop platforms\"",
+    "desktop:build": "cd desktop && pnpm install && pnpm run build",
     "mobile": "cd mobile && ns run",
     "mobile:android": "cd mobile && ns run android",
     "mobile:ios": "cd mobile && ns run ios",
@@ -19,6 +19,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@nodegui/nodegui": "^0.71.0",
     "@profullstack/sans-ui": "^1.0.3"
   },
   "devDependencies": {

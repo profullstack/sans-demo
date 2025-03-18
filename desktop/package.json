@@ -1,0 +1,18 @@
+{
+  "name": "sans-demo-desktop",
+  "version": "1.0.0",
+  "description": "Desktop demo app built using Sans UI",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "prebuild": "mkdir -p build && cp index.js build/ && echo '{\"name\": \"sans-demo-desktop\", \"version\": \"1.0.0\", \"main\": \"index.js\", \"dependencies\": {\"@nodegui/nodegui\": \"^0.71.0\", \"@profullstack/sans-ui\": \"^1.0.3\"}}' > build/package.json",
+    "build": "npm run prebuild && npx @nodegui/packer --init sans-demo-desktop && npx @nodegui/packer --pack ./build"
+  },
+  "dependencies": {
+    "@nodegui/nodegui": "^0.71.0",
+    "@profullstack/sans-ui": "^1.0.3"
+  },
+  "devDependencies": {
+    "@nodegui/packer": "^1.5.0"
+  }
+}
